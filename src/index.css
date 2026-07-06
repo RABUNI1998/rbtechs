@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-brand-primary: #1e3b32;
+  --color-brand-secondary: #ff9f1c;
+  --color-brand-light: #284c40;
+  
+  --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+:root {
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --text-inverse: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom styled bracket corners for cards */
+.bracket-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  border: 1px solid var(--border-color);
+}
+
+.bracket-card::before, .bracket-card::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-color);
+  opacity: 0.15;
+  transition: all 0.3s ease;
+}
+
+.bracket-card:hover::before, .bracket-card:hover::after {
+  opacity: 1;
+  border-color: var(--color-brand-primary);
+  width: 50px;
+  height: 50px;
+}
+
+.bracket-card::before {
+  top: 1.5rem;
+  right: 1.5rem;
+  border-bottom: none;
+  border-left: none;
+  border-top-right-radius: 0.5rem;
+}
+
+.bracket-card::after {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  border-top: none;
+  border-right: none;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* Rounded bottom curve divider */
+.hero-curve-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+
+.hero-curve-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.hero-curve-divider .shape-fill {
+  fill: var(--background-color);
+}
