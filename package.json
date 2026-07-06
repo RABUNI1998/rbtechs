@@ -1,7 +1,9 @@
 {
-  "name": "rbtech_website",
+  "name": "rbtechs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Premium Agency Website for RBTECHS (Rabuni Tech Solutions)",
+  "author": "Joseph Marfo",
   "type": "module",
   "scripts": {
     "dev": "vite",

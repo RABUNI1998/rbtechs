@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# RBTECHS (Rabuni Tech Solutions)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**An Elite Software & Web Development Agency Website**
 
-Currently, two official plugins are available:
+![RBTECHS Preview](https://rbtechs.com/og-image.jpg) <!-- Update this URL once you host your image -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Welcome to the official repository for the **RBTECHS** agency website. We engineer world-class websites, bespoke mobile applications, and advanced enterprise Excel solutions tailored to supercharge business workflows.
 
-## React Compiler
+## 🚀 Features
+- **Premium UI/UX:** Built with React, TailwindCSS v4, and Framer Motion for buttery-smooth scrolling and micro-animations.
+- **Glassmorphism & Bento Grids:** Employs modern, high-end agency design trends including elevated "Zig-Zag" service layouts and asymmetrical bento grids.
+- **Dynamic Product Showcases:** Features an "App Store" style product gallery to showcase flagship apps like **RB Player** and **RB Calculator**.
+- **Contact Integration:** Fully wired contact form powered by Web3Forms for instant email delivery without a backend server.
+- **SEO Optimized:** Fully configured with `robots.txt`, `sitemap.xml`, Open Graph tags, and optimized meta descriptions for Google Search indexing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
+- **Frontend Framework:** React 19 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS (v4) + Vanilla CSS Variables
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Routing:** React Router v7
 
-## Expanding the Oxlint configuration
+## 💻 Running Locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+2. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
+   *This will generate a highly optimized bundle in the `/dist` directory.*
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## 🌍 Deployment
+This website is optimized for seamless deployment on platforms like **Vercel** or **Netlify**. 
+A `public/_redirects` file is included to handle client-side routing on Netlify.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+**Developed with ❤️ by Joseph Marfo**  
+Founder & Lead Engineer, RBTECHS  
+📍 Kumasi, Ghana
