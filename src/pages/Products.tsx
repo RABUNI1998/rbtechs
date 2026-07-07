@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Star, Download } from 'lucide-react';
 import { productsData } from '../data/products';
 
@@ -46,54 +45,36 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Featured Apps (Hero Cards) */}
+      {/* Featured App (Hero Card) */}
       <section className="w-full max-w-7xl mx-auto px-4 -mt-20 z-20 relative">
-        <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: { staggerChildren: 0.2 }
-            }
-          }}
-        >
-          {productsData.slice(0, 2).map((product) => (
-            <motion.div key={product.id} variants={{
-              hidden: { opacity: 0, y: 40 },
-              show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-            }}>
-              <Link to={`/products/${product.id}`} className="block relative rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group bg-white border-[8px] border-white/50 backdrop-blur-xl h-[450px] md:h-[500px]">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 z-10 transition-opacity duration-500 group-hover:from-black/95 group-hover:via-black/50" />
-                <motion.img 
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  src={product.bannerUrl || product.screenshots[0]} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover absolute inset-0"
-                />
-                <div className="absolute bottom-0 left-0 p-8 z-20 flex flex-col md:flex-row items-start md:items-end gap-6 w-full">
-                  <motion.img 
-                    whileHover={{ rotate: -5, scale: 1.05 }}
-                    src={product.iconUrl} alt="icon" 
-                    className="w-24 h-24 rounded-[24%] shadow-2xl border border-white/20" 
-                  />
-                  <div className="text-white flex-grow">
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3" style={{ backgroundColor: 'var(--color-brand-secondary)', color: 'var(--color-brand-primary)' }}>Featured</span>
-                    <h2 className="text-4xl font-extrabold mb-2 leading-tight">{product.name}</h2>
-                    <p className="text-base opacity-90 max-w-md font-light leading-snug line-clamp-2 mb-4">{product.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {product.platforms.map(p => (
-                        <span key={p} className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-bold tracking-wide border border-white/10">{p}</span>
-                      ))}
-                    </div>
-                  </div>
+        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+          <Link to={`/products/${productsData[0].id}`} className="block relative rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group bg-white border-[8px] border-white/50 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 transition-opacity duration-500 group-hover:from-black/95" />
+            <motion.img 
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              src={productsData[0].bannerUrl} 
+              alt={productsData[0].name} 
+              className="w-full h-[500px] md:h-[600px] object-cover"
+            />
+            <div className="absolute bottom-0 left-0 p-8 md:p-14 z-20 flex flex-col md:flex-row items-start md:items-end gap-8 w-full">
+              <motion.img 
+                whileHover={{ rotate: -5, scale: 1.05 }}
+                src={productsData[0].iconUrl} alt="icon" 
+                className="w-28 h-28 md:w-40 md:h-40 rounded-[24%] shadow-2xl border border-white/20" 
+              />
+              <div className="text-white flex-grow">
+                <span className="inline-block px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-4" style={{ backgroundColor: 'var(--color-brand-secondary)', color: 'var(--color-brand-primary)' }}>Featured</span>
+                <h2 className="text-5xl md:text-6xl font-extrabold mb-3">{productsData[0].name}</h2>
+                <p className="text-lg md:text-xl opacity-90 max-w-2xl font-light leading-relaxed mb-6">{productsData[0].description}</p>
+                <div className="flex flex-wrap gap-3">
+                  {productsData[0].platforms.map(p => (
+                    <span key={p} className="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-lg text-sm font-bold tracking-wide border border-white/10">{p}</span>
+                  ))}
                 </div>
-              </Link>
-            </motion.div>
-          ))}
+              </div>
+            </div>
+          </Link>
         </motion.div>
       </section>
 
@@ -111,7 +92,7 @@ export default function Products() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {productsData.slice(2).map((product) => (
+          {productsData.slice(1).map((product) => (
             <motion.div key={product.id} variants={itemVariants}>
               <Link to={`/products/${product.id}`} className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-400 border border-gray-100 flex flex-col h-full group relative overflow-hidden">
                 {/* Subtle background gradient on hover */}
