@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Star, Download, ChevronRight, ShieldCheck, LifeBuoy, ArrowLeft } from 'lucide-react';
+import { Star, Download, ChevronRight, ShieldCheck, LifeBuoy, ArrowLeft, Share2 } from 'lucide-react';
 import { getProductById } from '../data/products';
 
 export default function ProductDetails() {
@@ -29,9 +29,29 @@ export default function ProductDetails() {
         </div>
 
         <section className="max-w-6xl mx-auto px-4 pt-32 pb-16 relative z-10 text-white">
-          <Link to="/products" className="inline-flex items-center gap-2 font-semibold hover:opacity-80 transition-opacity mb-10 text-white/80">
-            <ArrowLeft size={20} /> App Store
-          </Link>
+          <div className="flex justify-between items-center mb-10">
+            <Link to="/products" className="inline-flex items-center gap-2 font-semibold hover:opacity-80 transition-opacity text-white/80">
+              <ArrowLeft size={20} /> App Store
+            </Link>
+            
+            <button 
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: product.name,
+                    text: `Check out ${product.name} on RB-TECH App Store!`,
+                    url: window.location.href,
+                  }).catch(console.error);
+                } else {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert("Link copied to clipboard!");
+                }
+              }}
+              className="inline-flex items-center gap-2 font-semibold hover:opacity-80 transition-opacity text-white/80 bg-white/10 px-4 py-2 rounded-full border border-white/20 hover:bg-white/20"
+            >
+              <Share2 size={18} /> Share
+            </button>
+          </div>
           
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <motion.img 
