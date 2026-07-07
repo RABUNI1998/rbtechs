@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "download_url": "https://rbtechs.netlify.app/downloads/RBPlayer_Installer.exe",
+  "release_notes": "Initial release of RB Player for Windows.",
+  "mandatory": false
+}
