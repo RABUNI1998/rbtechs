@@ -27,6 +27,7 @@ export interface Product {
   description: string;
   longDescription: string;
   platforms: string[];
+  downloadUrls?: Record<string, string>;
   rating: number;
   downloads: string;
   featured: boolean;
@@ -51,6 +52,10 @@ export const productsData: Product[] = [
     description: 'A powerful, all-in-one local media player and streaming hub. Seamlessly blends your local music and video libraries with advanced online streaming capabilities.',
     longDescription: 'RB Player is a powerful, all-in-one local media player and streaming hub for Android & Windows. Built with Flutter, it seamlessly blends your local music and video libraries with advanced online media integration and offline caching capabilities, all wrapped in a sleek, high-performance UI.\n\nWhether you are watching 4K movies via the robust MediaKit engine, caching online audio mixes for offline playback, or securing your private files in an AES-256 encrypted Vault, RB Player is the ultimate media companion.',
     platforms: ['Windows', 'Android'],
+    downloadUrls: {
+      'Windows': '/downloads/RBPlayer_Installer.exe',
+      'Android': '#'
+    },
     rating: 4.9,
     downloads: '50k+',
     featured: true,

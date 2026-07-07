@@ -66,22 +66,36 @@ export default function ProductDetails() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-wrap gap-4 mb-10"
               >
-                {product.platforms.map((platform, i) => (
-                  <motion.button 
-                    key={platform} 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 font-bold rounded-full transition-shadow shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg"
-                    style={{ 
-                      backgroundColor: i === 0 ? 'var(--color-brand-secondary)' : 'rgba(255,255,255,0.1)', 
-                      color: i === 0 ? 'var(--color-brand-primary)' : 'white',
-                      border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.2)'
-                    }}
-                  >
-                    <Download size={22} />
-                    Get for {platform}
-                  </motion.button>
-                ))}
+                {product.platforms.map((platform, i) => {
+                  const downloadUrl = product.downloadUrls?.[platform];
+                  const isAvailable = downloadUrl && downloadUrl !== '#';
+
+                  return (
+                    <motion.a 
+                      key={platform} 
+                      href={isAvailable ? downloadUrl : '#'}
+                      download={isAvailable}
+                      onClick={(e) => {
+                        if (!isAvailable) {
+                          e.preventDefault();
+                          alert(`${platform} version is coming soon!`);
+                        }
+                      }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`px-8 py-4 font-bold rounded-full transition-shadow shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg ${!isAvailable ? 'opacity-80' : ''}`}
+                      style={{ 
+                        backgroundColor: i === 0 ? 'var(--color-brand-secondary)' : 'rgba(255,255,255,0.1)', 
+                        color: i === 0 ? 'var(--color-brand-primary)' : 'white',
+                        border: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.2)',
+                        cursor: isAvailable ? 'pointer' : 'default'
+                      }}
+                    >
+                      <Download size={22} />
+                      Get for {platform}
+                    </motion.a>
+                  );
+                })}
               </motion.div>
               
               <motion.div 
