@@ -54,7 +54,7 @@ export const productsData: Product[] = [
     platforms: ['Windows', 'Android'],
     downloadUrls: {
       'Windows': '/downloads/RBPlayer_Installer.exe',
-      'Android': '#'
+      'Android': '/downloads/RBPlayer.apk'
     },
     rating: 4.9,
     downloads: '50k+',
@@ -81,11 +81,11 @@ export const productsData: Product[] = [
     ],
     privacyPolicyUrl: '/privacy/rb-player',
     supportUrl: '/support/rb-player',
-    size: '124 MB',
+    size: '~65 MB',
     developer: 'RB Team',
     ageRating: '4+',
-    version: '1.0.0',
-    releaseDate: '2026-07-06'
+    version: '1.0.1',
+    releaseDate: '2026-07-08'
   },
   {
     id: 'rb-calculator',
