@@ -52,8 +52,10 @@ export default function PrivacyPolicy() {
                 </h2>
                 <p className="font-bold text-gray-900 mb-2">100% Offline & Private</p>
                 <p className="text-gray-700">
-                  The versions of RB Player distributed through the Microsoft Store and Google Play Store function strictly as local media players. 
                   <strong> They do NOT connect to the internet, do NOT integrate with YouTube or any third-party APIs, and do NOT collect, transmit, or store any personal data or telemetry.</strong> All media processing, playback, and Private Vault encryption occur entirely offline on your local device.
+                </p>
+                <p className="text-gray-700 mt-2">
+                  <em>Note on Internet Access:</em> While the application manifest may declare Internet capabilities (`internetClient`) to allow the underlying framework to function correctly across different devices, the Store editions themselves do not actively make network requests or collect data.
                 </p>
               </div>
 
