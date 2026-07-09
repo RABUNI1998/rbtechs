@@ -80,7 +80,7 @@ export default function About() {
               Founded by <strong>Joseph Marfo</strong>, RBTECH started with a simple goal: to build software that doesn't just work, but feels extraordinary to use. What began as a passion for solving complex problems has evolved into a premier agency delivering bespoke solutions globally.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              From crafting the high-performance <strong>RB Player</strong> to developing intricate Excel architectures and massive web platforms, we approach every single line of code with craftsmanship and care.
+              From crafting the high-performance <strong>RB Player</strong> to developing intricate Excel architectures, full-scale E-commerce platforms, School & Church Management Software, Hospital Systems, and robust POS solutions. We approach every single line of code with craftsmanship and care.
             </p>
             <Link to="/products" className="inline-flex items-center gap-2 font-bold text-blue-600 hover:text-blue-800 transition-colors group">
               View Our Portfolio <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

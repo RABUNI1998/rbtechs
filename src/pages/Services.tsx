@@ -8,7 +8,7 @@ export default function Services() {
       icon: <Code size={32} className="text-white" />,
       title: 'Custom Software Development',
       description: 'We engineer robust, scalable, and secure enterprise software tailored to solve your most complex business bottlenecks.',
-      features: ['Architecture Design', 'API Integration', 'Cloud Deployment', 'Legacy Modernization'],
+      features: ['School Management Systems', 'Hospital & Church Software', 'POS & Inventory', 'Bespoke Enterprise Apps'],
       placeholder: 'service-software.png',
       bgColor: 'from-blue-500/20 to-blue-900/5'
     },
@@ -24,7 +24,7 @@ export default function Services() {
       icon: <Globe size={32} className="text-white" />,
       title: 'Website Development',
       description: 'From stunning corporate landing pages to complex e-commerce platforms, we build the blazing-fast web of tomorrow.',
-      features: ['Responsive React Apps', 'Technical SEO', 'CMS & Headless', 'E-commerce Solutions'],
+      features: ['E-Commerce Platforms', 'Church & NGO Websites', 'Corporate Portals', 'Responsive Web Apps'],
       placeholder: 'service-web.png',
       bgColor: 'from-teal-500/20 to-teal-900/5'
     },

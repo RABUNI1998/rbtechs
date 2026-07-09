@@ -95,7 +95,7 @@ export const productsData: Product[] = [
     version: '1.0.1',
     releaseDate: '2026-07-08',
     pricing: { type: 'Pro Version', price: '20 GHS/month' },
-    languages: ['English', 'Spanish', 'French', 'German'],
+    languages: ['English'],
     videoTrailerUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     systemRequirements: {
       'Windows': { os: 'Windows 10 version 1809 or higher', ram: '4 GB minimum', storage: '200 MB', architecture: 'x64, ARM64' },

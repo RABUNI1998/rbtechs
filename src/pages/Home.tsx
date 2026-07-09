@@ -36,7 +36,7 @@ export default function Home() {
     { 
       icon: <Globe size={32} />, 
       title: 'Websites & Web Apps', 
-      desc: 'Blazing fast, responsive, and SEO-optimized websites tailored to your brand.',
+      desc: 'Blazing fast, responsive websites including powerful E-commerce platforms and dedicated Church websites.',
       colSpan: 'md:col-span-2'
     },
     { 
@@ -48,7 +48,7 @@ export default function Home() {
     { 
       icon: <Smartphone size={32} />, 
       title: 'Custom Software', 
-      desc: 'Bespoke mobile (Android/iOS) and desktop applications built for scale.',
+      desc: 'Bespoke applications built for scale, including School Management, Church & Hospital software, and POS systems.',
       colSpan: 'md:col-span-3'
     },
   ];
