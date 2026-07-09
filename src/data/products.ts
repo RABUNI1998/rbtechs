@@ -42,6 +42,12 @@ export interface Product {
   ageRating: string;
   version: string;
   releaseDate: string;
+  changelog?: { version: string; date: string; changes: string[] }[];
+  systemRequirements?: Record<string, { os: string; ram: string; storage: string; architecture?: string }>;
+  videoTrailerUrl?: string;
+  languages?: string[];
+  pricing?: { type: string; price: string };
+  faqs?: { question: string; answer: string }[];
 }
 
 export const productsData: Product[] = [
@@ -85,7 +91,35 @@ export const productsData: Product[] = [
     developer: 'RB Team',
     ageRating: '4+',
     version: '1.0.1',
-    releaseDate: '2026-07-08'
+    releaseDate: '2026-07-08',
+    pricing: { type: 'Pro Version', price: '20 GHS/month' },
+    languages: ['English', 'Spanish', 'French', 'German'],
+    videoTrailerUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    systemRequirements: {
+      'Windows': { os: 'Windows 10 version 1809 or higher', ram: '4 GB minimum', storage: '200 MB', architecture: 'x64, ARM64' },
+      'Android': { os: 'Android 8.0 or higher', ram: '2 GB minimum', storage: '100 MB' }
+    },
+    changelog: [
+      {
+        version: '1.0.1',
+        date: '2026-07-08',
+        changes: ['Initial release for Windows and Android', 'Added YouTube integration for direct download versions', 'Secure Private Vault features']
+      }
+    ],
+    faqs: [
+      {
+        question: 'What is the difference between the Direct Download and Store versions?',
+        answer: 'The version downloaded directly from our website includes YouTube playback features. Due to store policies, the versions available on the Microsoft Store and Google Play Store do NOT include YouTube features.'
+      },
+      {
+        question: 'Do I need an internet connection?',
+        answer: 'No, you can play local media entirely offline. Internet is only required for streaming features (like YouTube) and online syncing.'
+      },
+      {
+        question: 'What do I get with the Pro Version for 20 GHS/month?',
+        answer: 'The Pro Version removes all ads, unlocks advanced equalizer settings, enables unlimited offline caching, and provides priority support.'
+      }
+    ]
   },
   {
     id: 'rb-calculator',
