@@ -209,16 +209,16 @@ export default function ProductDetails() {
 
       {/* Pricing Banner */}
       {product.pricing && (
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
+        <div className="bg-gradient-to-r from-yellow-600 via-amber-400 to-yellow-600 text-gray-900 py-6 border-b border-yellow-700/20 shadow-inner">
           <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
             <div>
-              <h3 className="text-2xl font-bold flex items-center gap-2">
-                <CheckCircle size={24} className="text-green-300" />
+              <h3 className="text-2xl font-extrabold flex items-center gap-2">
+                <CheckCircle size={24} className="text-gray-900" />
                 Upgrade to {product.pricing.type}
               </h3>
-              <p className="opacity-90 mt-1">Unlock all premium features, remove ads, and get priority support.</p>
+              <p className="opacity-90 mt-1 font-semibold">Unlock all premium features, remove ads, and get priority support.</p>
             </div>
-            <div className="mt-4 sm:mt-0 text-3xl font-extrabold bg-white/20 px-6 py-2 rounded-full border border-white/30">
+            <div className="mt-4 sm:mt-0 text-3xl font-extrabold bg-gray-900/10 px-6 py-2 rounded-full border border-gray-900/20 shadow-sm">
               {product.pricing.price}
             </div>
           </div>
@@ -382,7 +382,7 @@ export default function ProductDetails() {
                         value={reviewForm.user}
                         onChange={e => setReviewForm({...reviewForm, user: e.target.value})}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        placeholder="John Doe"
+                        placeholder="Rabuni"
                       />
                     </div>
                     <div className="mb-4">

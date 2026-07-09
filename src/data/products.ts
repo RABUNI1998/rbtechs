@@ -80,15 +80,16 @@ export const productsData: Product[] = [
     ],
     features: [
       'Unified Media Experience: Smart organization for local music and videos.',
-      'Advanced Media Integration: Stream, discover, and background-play online content seamlessly.',
-      'Offline Caching: Save streams locally for high-quality offline playback.',
-      'Secure Private Vault: Hide and encrypt sensitive media behind a PIN/Biometric lock.',
+      'Free Ad-Free Streaming: Watch and stream YouTube videos entirely free with zero interruptions.',
+      'Secure Private Vault (Pro): Hide and encrypt sensitive media behind a PIN/Biometric lock.',
+      'Advanced Equalizer (Pro): Fine-tune your audio experience with a powerful multi-band equalizer.',
+      'YouTube Downloads (Pro): Download YouTube videos or convert them directly to MP3 audio (Android version only).',
       'Powerful Playback Engine: MediaKit powered, supporting Picture-in-Picture (PiP) and all major formats.',
     ],
     privacyPolicyUrl: '/privacy/rb-player',
     supportUrl: '/support/rb-player',
     size: '~65 MB',
-    developer: 'RB Team',
+    developer: 'RBTECHS TEAM',
     ageRating: '4+',
     version: '1.0.1',
     releaseDate: '2026-07-08',
@@ -117,7 +118,7 @@ export const productsData: Product[] = [
       },
       {
         question: 'What do I get with the Pro Version for 20 GHS/month?',
-        answer: 'The Pro Version removes all ads, unlocks advanced equalizer settings, enables unlimited offline caching, and provides priority support.'
+        answer: 'The Pro Version unlocks the Advanced Equalizer, the Secure Private Vault for hiding files, and allows you to download YouTube videos directly to your device (including converting to MP3 audio on the Android version).'
       }
     ]
   },
@@ -151,7 +152,7 @@ export const productsData: Product[] = [
     privacyPolicyUrl: '/privacy/rb-calculator',
     supportUrl: '/support/rb-calculator',
     size: '18 MB',
-    developer: 'RB Team',
+    developer: 'RBTECHS TEAM',
     ageRating: '4+',
     version: '2.1.4',
     releaseDate: '2025-11-12'
@@ -181,7 +182,7 @@ export const productsData: Product[] = [
     privacyPolicyUrl: '/privacy/rb-pdf-reader',
     supportUrl: '/support/rb-pdf-reader',
     size: '45 MB',
-    developer: 'RB Team',
+    developer: 'RBTECHS TEAM',
     ageRating: '4+',
     version: '3.0.1',
     releaseDate: '2026-02-28'
