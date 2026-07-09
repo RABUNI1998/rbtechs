@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Download, ChevronRight, ShieldCheck, LifeBuoy, ArrowLeft, Share2, Info, Monitor, Smartphone, Video, Plus, ChevronDown, CheckCircle } from 'lucide-react';
 import { getProductById, productsData } from '../data/products';
 import { trackAppDownload, getAppDownloads, getProductReviews, addProductReview, type Review } from '../lib/firebase';
+import { Helmet } from 'react-helmet-async';
+import AdBanner from '../components/AdBanner';
 
 export default function ProductDetails() {
   const { id } = useParams<{ id: string }>();
@@ -74,6 +76,12 @@ export default function ProductDetails() {
 
   return (
     <div className="bg-white min-h-screen pb-24 font-sans">
+      <Helmet>
+        <title>Download {product.name} | RBTECHS</title>
+        <meta name="description" content={`Download ${product.name}, a powerful ${product.category.toLowerCase()} app built by RBTECHS TEAM. ${product.description}`} />
+        <meta name="keywords" content={`${product.name}, download ${product.name}, RBTECHS, software, ${product.category.toLowerCase()}, app`} />
+      </Helmet>
+
       {/* Immersive Glassmorphism Header */}
       <div className="relative w-full overflow-hidden" style={{ backgroundColor: 'var(--color-brand-primary)' }}>
         <div className="absolute inset-0 opacity-40 blur-3xl scale-110 pointer-events-none">
@@ -141,7 +149,7 @@ export default function ProductDetails() {
               >
                 {product.platforms.map((platform, i) => {
                   const downloadUrl = product.downloadUrls?.[platform];
-                  const isAvailable = downloadUrl && downloadUrl !== '#';
+                  const isAvailable = downloadUrl && downloadUrl !== '#' && !product.comingSoon;
 
                   return (
                     <motion.a 
@@ -151,7 +159,7 @@ export default function ProductDetails() {
                       onClick={(e) => {
                         if (!isAvailable) {
                           e.preventDefault();
-                          alert(`${platform} version is coming soon!`);
+                          alert(product.comingSoon ? `${product.name} is coming soon!` : `${platform} version is coming soon!`);
                         } else {
                           handleDownload(platform);
                         }
@@ -167,7 +175,7 @@ export default function ProductDetails() {
                       }}
                     >
                       <Download size={22} />
-                      Get for {platform}
+                      {product.comingSoon ? 'Coming Soon' : `Get for ${platform}`}
                     </motion.a>
                   );
                 })}
@@ -224,6 +232,11 @@ export default function ProductDetails() {
           </div>
         </div>
       )}
+
+      {/* Ad Banner injected below the hero section */}
+      <div className="max-w-6xl mx-auto px-4 mt-8">
+        <AdBanner />
+      </div>
 
       {/* Animated Screenshots & Video Gallery */}
       <section className="py-16 border-b border-gray-100 overflow-hidden bg-gray-50/50">

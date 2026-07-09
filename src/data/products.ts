@@ -48,6 +48,7 @@ export interface Product {
   languages?: string[];
   pricing?: { type: string; price: string };
   faqs?: { question: string; answer: string }[];
+  comingSoon?: boolean;
 }
 
 export const productsData: Product[] = [
@@ -132,6 +133,7 @@ export const productsData: Product[] = [
     rating: 4.8,
     downloads: '25k+',
     featured: false,
+    comingSoon: true,
     iconUrl: rbCalcLogo,
     screenshots: [
       rbCalcAndroid1,
@@ -167,6 +169,7 @@ export const productsData: Product[] = [
     rating: 4.7,
     downloads: '80k+',
     featured: false,
+    comingSoon: true,
     iconUrl: 'https://placehold.co/512x512/e63946/ffffff?text=RB+PDF\nIcon',
     screenshots: [
       'https://placehold.co/1920x1080/f1faee/e63946?text=PDF+Reader+Desktop',

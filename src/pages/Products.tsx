@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion, type Variants } from 'framer-motion';
 import { Star, Download } from 'lucide-react';
 import { productsData } from '../data/products';
+import AdBanner from '../components/AdBanner';
+import { Helmet } from 'react-helmet-async';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -19,6 +21,11 @@ const itemVariants: Variants = {
 export default function Products() {
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-50 pb-24">
+      <Helmet>
+        <title>RBTECHS App Store | Premium Software & Applications</title>
+        <meta name="description" content="Discover our suite of beautifully crafted applications designed to supercharge your workflow. Download RB Player, RB Calculator, and more." />
+      </Helmet>
+
       {/* Premium Hero Section */}
       <section className="w-full relative pt-40 pb-32 px-4" style={{ backgroundColor: 'var(--color-brand-primary)', color: 'var(--text-inverse)' }}>
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -85,6 +92,10 @@ export default function Products() {
           <div className="h-[2px] flex-grow ml-8 bg-gradient-to-r from-gray-200 to-transparent"></div>
         </div>
 
+        <div className="mb-12">
+          <AdBanner />
+        </div>
+
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -124,12 +135,12 @@ export default function Products() {
                     <Star size={16} className="fill-current" />
                   </div>
                   <motion.div 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-6 py-2.5 font-bold text-sm rounded-full transition-shadow shadow-md hover:shadow-lg"
+                    whileHover={!product.comingSoon ? { scale: 1.05 } : {}}
+                    whileTap={!product.comingSoon ? { scale: 0.95 } : {}}
+                    className={`flex items-center gap-2 px-6 py-2.5 font-bold text-sm rounded-full transition-shadow ${product.comingSoon ? 'opacity-50 cursor-not-allowed' : 'shadow-md hover:shadow-lg'}`}
                     style={{ backgroundColor: 'var(--color-brand-primary)', color: 'var(--text-inverse)' }}
                   >
-                    <Download size={16} /> Get
+                    {product.comingSoon ? 'Coming Soon' : <><Download size={16} /> Get</>}
                   </motion.div>
                 </div>
               </Link>
