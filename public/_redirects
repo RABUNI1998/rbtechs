@@ -1,1 +1,4 @@
 https://rbtechs.netlify.app/* https://rbtechs.online/:splat  301!
+
+# Catch-all rule for client-side routing
+/* /index.html   200
