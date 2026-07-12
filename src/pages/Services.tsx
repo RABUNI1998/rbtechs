@@ -2,6 +2,11 @@ import { Code, Smartphone, Globe, Table, CheckCircle2, ArrowRight } from 'lucide
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+import imgSoftware from '../assets/service-software.png';
+import imgMobile from '../assets/sercice-mobile.png';
+import imgWeb from '../assets/service-web.png';
+import imgExcel from '../assets/service-excel.png';
+
 export default function Services() {
   const services = [
     {
@@ -9,7 +14,7 @@ export default function Services() {
       title: 'Custom Software Development',
       description: 'We engineer robust, scalable, and secure enterprise software tailored to solve your most complex business bottlenecks.',
       features: ['School Management Systems', 'Hospital & Church Software', 'POS & Inventory', 'Bespoke Enterprise Apps'],
-      placeholder: 'service-software.png',
+      image: imgSoftware,
       bgColor: 'from-blue-500/20 to-blue-900/5'
     },
     {
@@ -17,7 +22,7 @@ export default function Services() {
       title: 'Mobile & Windows Apps',
       description: 'High-performance cross-platform and native applications delivering exceptional, fluid user experiences.',
       features: ['iOS & Android Native', 'Windows Desktop Pro', 'UI/UX Motion Design', 'App Store Optimization'],
-      placeholder: 'service-mobile.png',
+      image: imgMobile,
       bgColor: 'from-purple-500/20 to-purple-900/5'
     },
     {
@@ -25,7 +30,7 @@ export default function Services() {
       title: 'Website Development',
       description: 'From stunning corporate landing pages to complex e-commerce platforms, we build the blazing-fast web of tomorrow.',
       features: ['E-Commerce Platforms', 'Church & NGO Websites', 'Corporate Portals', 'Responsive Web Apps'],
-      placeholder: 'service-web.png',
+      image: imgWeb,
       bgColor: 'from-teal-500/20 to-teal-900/5'
     },
     {
@@ -33,7 +38,7 @@ export default function Services() {
       title: 'Excel Solutions',
       description: 'Automate your workflows and unlock the power of your data with our elite Excel analytics and macro services.',
       features: ['Advanced VBA Macros', 'Dynamic Dashboards', 'Process Automation', 'Complex Data Modeling'],
-      placeholder: 'service-excel.png',
+      image: imgExcel,
       bgColor: 'from-emerald-500/20 to-emerald-900/5'
     }
   ];
@@ -119,14 +124,11 @@ export default function Services() {
                 <div className="absolute top-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-3xl pointer-events-none group-hover:bg-white/30 transition-colors" />
                 <div className="absolute bottom-10 left-10 w-40 h-40 bg-black/5 rounded-full blur-3xl pointer-events-none" />
 
-                <div className="text-center px-12 z-10">
-                   <div className="inline-block px-4 py-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm text-sm font-bold tracking-widest uppercase text-gray-500 mb-6 border border-gray-100">
-                     Image Placeholder
-                   </div>
-                   <p className="text-gray-600 font-medium text-lg max-w-sm mx-auto leading-relaxed">
-                     [Replace with: <br/><code className="bg-white/50 px-2 py-1 rounded font-mono text-blue-600 mt-2 inline-block">{service.placeholder}</code>]
-                   </p>
-                </div>
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105"
+                />
 
               </div>
             </motion.div>
