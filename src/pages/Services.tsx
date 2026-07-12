@@ -57,32 +57,34 @@ export default function Services() {
   return (
     <div className="flex flex-col w-full bg-gray-50 text-gray-900 min-h-screen selection:bg-brand-secondary selection:text-brand-primary">
       {/* Page Header */}
-      <section className="relative pt-40 pb-20 px-4 md:px-8 z-10 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-           <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[100px]" />
-           <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-brand-secondary/10 rounded-full blur-[100px]" />
-        </div>
+      <section className="w-full relative pt-40 pb-48 px-4" style={{ backgroundColor: 'var(--color-brand-primary)', color: 'var(--text-inverse)' }}>
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-gray-200 bg-white/80 backdrop-blur-md text-sm font-bold tracking-widest uppercase text-brand-secondary">
+            <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-sm font-bold tracking-widest uppercase" style={{ color: 'var(--color-brand-secondary)' }}>
               What We Do
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight text-gray-900">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-amber-500">Services.</span>
-            </h1>
-            <p className="text-xl md:text-2xl opacity-80 max-w-3xl mx-auto font-light leading-relaxed text-gray-600">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">Our Services.</h1>
+            <p className="text-xl md:text-2xl opacity-80 max-w-3xl mx-auto font-light leading-relaxed">
               Comprehensive digital solutions crafted with extreme precision and engineering excellence to accelerate your growth.
             </p>
           </motion.div>
         </div>
+        
+        {/* Custom SVG Curve Divider */}
+        <div className="hero-curve-divider pointer-events-none">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="rgba(255,255,255,0.05)"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05c50.7,38.41,114.73,50.7,178.6,48.78,138.8-4.18,272.2-46.13,410.6-53.79C774.5,58.59,887.6,108.31,1028,103.87c74.4-2.38,138.7-22.75,172-35.34V0Z" fill="#f9fafb"></path>
+          </svg>
+        </div>
       </section>
 
       {/* Sticky Scroll Section */}
-      <section className="relative w-full px-4 md:px-8 pb-32">
+      <section className="relative w-full px-4 md:px-8 pb-32 -mt-20 z-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row relative items-start">
           
           {/* Left Text Column */}
