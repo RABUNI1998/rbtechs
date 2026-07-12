@@ -14,52 +14,52 @@ export default function Services() {
   const services = [
     {
       id: 'software',
-      icon: <Code size={32} className="text-blue-400" />,
+      icon: <Code size={32} className="text-blue-500" />,
       title: 'Custom Software Development',
       description: 'We engineer robust, scalable, and secure enterprise software tailored to solve your most complex business bottlenecks.',
       features: ['School Management Systems', 'Hospital & Church Software', 'POS & Inventory', 'Bespoke Enterprise Apps'],
       image: imgSoftware,
-      bgColor: 'from-blue-900/40 to-blue-950',
-      accentColor: 'text-blue-400'
+      bgColor: 'from-blue-500/20 to-blue-900/5',
+      accentColor: 'text-blue-500'
     },
     {
       id: 'mobile',
-      icon: <Smartphone size={32} className="text-purple-400" />,
+      icon: <Smartphone size={32} className="text-purple-500" />,
       title: 'Mobile & Windows Apps',
       description: 'High-performance cross-platform and native applications delivering exceptional, fluid user experiences.',
       features: ['iOS & Android Native', 'Windows Desktop Pro', 'UI/UX Motion Design', 'App Store Optimization'],
       image: imgMobile,
-      bgColor: 'from-purple-900/40 to-purple-950',
-      accentColor: 'text-purple-400'
+      bgColor: 'from-purple-500/20 to-purple-900/5',
+      accentColor: 'text-purple-500'
     },
     {
       id: 'web',
-      icon: <Globe size={32} className="text-teal-400" />,
+      icon: <Globe size={32} className="text-teal-500" />,
       title: 'Website Development',
       description: 'From stunning corporate landing pages to complex e-commerce platforms, we build the blazing-fast web of tomorrow.',
       features: ['E-Commerce Platforms', 'Church & NGO Websites', 'Corporate Portals', 'Responsive Web Apps'],
       image: imgWeb,
-      bgColor: 'from-teal-900/40 to-teal-950',
-      accentColor: 'text-teal-400'
+      bgColor: 'from-teal-500/20 to-teal-900/5',
+      accentColor: 'text-teal-500'
     },
     {
       id: 'excel',
-      icon: <Table size={32} className="text-emerald-400" />,
+      icon: <Table size={32} className="text-emerald-500" />,
       title: 'Excel Solutions',
       description: 'Automate your workflows and unlock the power of your data with our elite Excel analytics and macro services.',
       features: ['Advanced VBA Macros', 'Dynamic Dashboards', 'Process Automation', 'Complex Data Modeling'],
       image: imgExcel,
-      bgColor: 'from-emerald-900/40 to-emerald-950',
-      accentColor: 'text-emerald-400'
+      bgColor: 'from-emerald-500/20 to-emerald-900/5',
+      accentColor: 'text-emerald-500'
     }
   ];
 
   return (
-    <div className="flex flex-col w-full bg-slate-950 text-slate-50 min-h-screen selection:bg-brand-secondary selection:text-brand-primary">
+    <div className="flex flex-col w-full bg-gray-50 text-gray-900 min-h-screen selection:bg-brand-secondary selection:text-brand-primary">
       {/* Page Header */}
       <section className="relative pt-40 pb-20 px-4 md:px-8 z-10 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-           <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-[100px]" />
+           <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[100px]" />
            <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-brand-secondary/10 rounded-full blur-[100px]" />
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -68,13 +68,13 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-md text-sm font-bold tracking-widest uppercase text-brand-secondary">
+            <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-gray-200 bg-white/80 backdrop-blur-md text-sm font-bold tracking-widest uppercase text-brand-secondary">
               What We Do
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight text-white">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight text-gray-900">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-amber-500">Services.</span>
             </h1>
-            <p className="text-xl md:text-2xl opacity-80 max-w-3xl mx-auto font-light leading-relaxed text-slate-300">
+            <p className="text-xl md:text-2xl opacity-80 max-w-3xl mx-auto font-light leading-relaxed text-gray-600">
               Comprehensive digital solutions crafted with extreme precision and engineering excellence to accelerate your growth.
             </p>
           </motion.div>
@@ -99,7 +99,7 @@ export default function Services() {
 
           {/* Right Image Column (Sticky) */}
           <div className="hidden md:flex w-1/2 h-screen sticky top-0 flex-col items-center justify-center p-8 z-0">
-             <div className="relative w-full aspect-square max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50 bg-slate-900/50 backdrop-blur-xl flex items-center justify-center p-8">
+             <div className="relative w-full aspect-square max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white/80 backdrop-blur-xl flex items-center justify-center p-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeIndex}
@@ -107,7 +107,7 @@ export default function Services() {
                     animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                     exit={{ opacity: 0, scale: 1.1, filter: 'blur(10px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className={`absolute inset-0 bg-gradient-to-br ${services[activeIndex].bgColor} opacity-30`}
+                    className={`absolute inset-0 bg-gradient-to-br ${services[activeIndex].bgColor} opacity-60`}
                   />
                   <motion.img
                     key={`img-${activeIndex}`}
@@ -127,10 +127,10 @@ export default function Services() {
       </section>
 
       {/* Massive CTA Section */}
-      <section className="w-full py-32 px-4 md:px-8 relative bg-slate-900 border-t border-slate-800">
+      <section className="w-full py-32 px-4 md:px-8 relative bg-brand-primary text-white border-t border-brand-light">
         {/* Background glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-light/30 rounded-full blur-[120px]" />
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -141,9 +141,9 @@ export default function Services() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight">
-              Ready to build <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-amber-500">something amazing?</span>
+              Ready to build <br/><span className="text-brand-secondary">something amazing?</span>
             </h2>
-            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Stop settling for template solutions. Let our elite engineering team architect the perfect software for your exact needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -155,7 +155,7 @@ export default function Services() {
               </Link>
               <Link 
                 to="/products" 
-                className="px-10 py-5 rounded-full font-bold text-lg text-white border border-slate-700 hover:bg-slate-800 transition-colors flex items-center gap-2"
+                className="px-10 py-5 rounded-full font-bold text-lg text-white border border-white/20 hover:bg-white/10 transition-colors flex items-center gap-2"
               >
                 View Our Apps
               </Link>
@@ -206,32 +206,32 @@ function ServiceTextItem({ service, index, setActiveIndex }: { service: any, ind
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 bg-slate-800 border border-slate-700/50 shadow-xl">
+        <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 bg-white border border-gray-100 shadow-lg">
           {service.icon}
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
           {service.title}
         </h2>
         
-        <p className="text-xl text-slate-400 mb-10 leading-relaxed font-light">
+        <p className="text-xl text-gray-600 mb-10 leading-relaxed font-light">
           {service.description}
         </p>
         
         <ul className="space-y-5 mb-12">
           {service.features.map((feature: string, idx: number) => (
             <li key={idx} className="flex items-center gap-4 group">
-              <div className="bg-slate-800/50 p-1.5 rounded-full group-hover:scale-110 group-hover:bg-slate-700 transition-all border border-slate-700/50">
+              <div className="bg-gray-100 p-1.5 rounded-full group-hover:scale-110 group-hover:bg-gray-200 transition-all border border-gray-200">
                  <CheckCircle2 size={20} className={service.accentColor} />
               </div>
-              <span className="font-medium text-lg text-slate-300 group-hover:text-white transition-colors">{feature}</span>
+              <span className="font-semibold text-lg text-gray-700 group-hover:text-gray-900 transition-colors">{feature}</span>
             </li>
           ))}
         </ul>
 
         {/* Mobile-only Image (hidden on desktop where sticky image is used) */}
-        <div className="md:hidden w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative bg-slate-800/50 border border-slate-700/50 p-6 flex items-center justify-center">
-            <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-30`} />
+        <div className="md:hidden w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative bg-white border border-gray-100 p-6 flex items-center justify-center">
+            <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-60`} />
             <img 
               src={service.image} 
               alt={service.title} 
