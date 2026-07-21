@@ -1,5 +1,5 @@
 import rbPlayerLogo from '../assets/rbplayer/logo.png';
-import rbPlayerBanner from '../assets/rbplayer/windows/youtube .jpg';
+import rbPlayerBanner from '../assets/rbplayer/windows/streamer screen.jpg';
 import rbPlayerAndroid1 from '../assets/rbplayer/android/Screenshot 1.jpg';
 import rbPlayerAndroid2 from '../assets/rbplayer/android/Screenshot 2.jpg';
 import rbPlayerAndroid3 from '../assets/rbplayer/android/Screenshot 3.jpg';
@@ -8,7 +8,8 @@ import rbPlayerAndroid5 from '../assets/rbplayer/android/Screenshot 5.jpg';
 import rbPlayerAndroid6 from '../assets/rbplayer/android/Screenshot 6.jpg';
 import rbPlayerWin1 from '../assets/rbplayer/windows/equilizer.jpg';
 import rbPlayerWin2 from '../assets/rbplayer/windows/folder screen.jpg';
-import rbPlayerWin3 from '../assets/rbplayer/windows/music player.jpg';
+import rbPlayerWin3 from '../assets/rbplayer/windows/downloads.png';
+import rbPlayerWin4 from '../assets/rbplayer/windows/streamer screen.jpg';
 
 import rbCalcLogo from '../assets/rbcalculator/logo.png';
 import rbCalcAndroid1 from '../assets/rbcalculator/android/Screenshot 1.jpg';
@@ -56,11 +57,13 @@ export const productsData: Product[] = [
     id: 'rb-player',
     name: 'RB Player',
     category: 'Media & Video',
-    description: 'A powerful, all-in-one local media player and streaming hub. Seamlessly blends your local music and video libraries with advanced online streaming capabilities.',
-    longDescription: 'RB Player is a powerful, all-in-one local media player and streaming hub for Android & Windows. Built with Flutter, it seamlessly blends your local music and video libraries with advanced online media integration and offline caching capabilities, all wrapped in a sleek, high-performance UI.\n\nWhether you are watching 4K movies via the robust MediaKit engine, caching online audio mixes for offline playback, or securing your private files in an AES-256 encrypted Vault, RB Player is the ultimate media companion.',
-    platforms: ['Windows', 'Android'],
+    description: 'A powerful 4K local media player, universal network streamer, and audio DSP engine.',
+    longDescription: 'RB Player is a powerful, all-in-one local media player and universal network streamer for Windows & Android. Built with Flutter and native C++ FFmpeg, it seamlessly blends your local music and video libraries with high-performance link streaming, 4K video downloads, 60 FPS animated audio visualizers, and OpenSubtitles integration, all wrapped in a sleek, dark-mode interface.\n\nWhether you are watching 4K movies via the hardware-accelerated MediaKit engine, stream-caching online audio for offline playback, tuning frequencies with the 10-band DSP equalizer, or securing your private media in an AES-256 encrypted Vault, RB Player is the ultimate media companion.',
+    platforms: ['Windows (Direct)', 'Microsoft Store', 'Uptodown', 'Android'],
     downloadUrls: {
-      'Windows': '/downloads/RBPlayer_Installer.exe',
+      'Windows (Direct)': '/downloads/RBPlayer_Store_Installer_1.0.3.exe',
+      'Microsoft Store': 'https://apps.microsoft.com/store/detail/9PNMJ4TXZ4BZ?cid=DevShareMCLPCS',
+      'Uptodown': 'https://rb-player-windows.en.uptodown.com/windows',
       'Android': '/downloads/RBPlayer.apk'
     },
     rating: 4.9,
@@ -69,31 +72,33 @@ export const productsData: Product[] = [
     iconUrl: rbPlayerLogo,
     bannerUrl: rbPlayerBanner,
     screenshots: [
-      rbPlayerAndroid1,
-      rbPlayerWin1,
-      rbPlayerAndroid2,
-      rbPlayerWin2,
-      rbPlayerAndroid3,
+      rbPlayerWin4,
       rbPlayerWin3,
+      rbPlayerWin1,
+      rbPlayerWin2,
+      rbPlayerAndroid1,
+      rbPlayerAndroid2,
+      rbPlayerAndroid3,
       rbPlayerAndroid4,
       rbPlayerAndroid5,
       rbPlayerAndroid6,
     ],
     features: [
-      'Unified Media Experience: Smart organization for local music and videos.',
-      'Free Ad-Free Streaming: Watch and stream YouTube videos entirely free with zero interruptions.',
-      'Secure Private Vault (Pro): Hide and encrypt sensitive media behind a PIN/Biometric lock.',
-      'Advanced Equalizer (Pro): Fine-tune your audio experience with a powerful multi-band equalizer.',
-      'YouTube Downloads (Pro): Download YouTube videos or convert them directly to MP3 audio (Android version only).',
-      'Powerful Playback Engine: MediaKit powered, supporting Picture-in-Picture (PiP) and all major formats.',
+      'Instant 0-Second Library Indexing: Auto-scans local folders with 0ms load speed.',
+      'Universal Network Streamer & Downloader: Paste links to stream or download HD/4K videos and high-bitrate MP3 audio.',
+      'Animated 60 FPS Audio Visualizer: Glowing neon frequency spectrum bars and dynamic waveforms that pulse to music.',
+      '10-Band Equalizer & 3D Audio DSP: Hardware-level tuning from 60Hz to 16kHz with Bass Boost, 3D Reverb, and Surround Sound.',
+      'Automatic OpenSubtitles Search: Download and sync subtitles with millisecond timing alignment controls.',
+      'AES-256 Encrypted Private Vault: Secure PIN protection to hide sensitive audio and video files.',
+      'Floating Mini Player: Hover-fade transparent video window for seamless multitasking on Windows.',
     ],
     privacyPolicyUrl: '/privacy/rb-player',
     supportUrl: '/support/rb-player',
-    size: '~65 MB',
+    size: '~60 MB',
     developer: 'RBTECHS TEAM',
     ageRating: '4+',
-    version: '1.0.1',
-    releaseDate: '2026-07-08',
+    version: '1.0.3',
+    releaseDate: '2026-07-21',
     pricing: { type: 'Pro Version', price: '20 GHS/month' },
     languages: ['English'],
     videoTrailerUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -103,23 +108,34 @@ export const productsData: Product[] = [
     },
     changelog: [
       {
+        version: '1.0.3',
+        date: '2026-07-21',
+        changes: [
+          'Instant 0-second local media library indexing',
+          'Real-time 60 FPS animated audio spectrum visualizer',
+          'Native LGPL FFmpeg frame extraction for 100% video format support',
+          'Universal network link streaming & background downloader',
+          'Enhanced 10-band DSP equalizer and mini player controls'
+        ]
+      },
+      {
         version: '1.0.1',
         date: '2026-07-08',
-        changes: ['Initial release for Windows and Android', 'Added YouTube integration for direct download versions', 'Secure Private Vault features']
+        changes: ['Initial release for Windows and Android', 'Added network streaming features', 'Secure Private Vault features']
       }
     ],
     faqs: [
       {
-        question: 'What is the difference between the Direct Download and Store versions?',
-        answer: 'The version downloaded directly from our website includes YouTube playback features. Due to store policies, the versions available on the Microsoft Store and Google Play Store do NOT include YouTube features.'
+        question: 'What media formats does RB Player support?',
+        answer: 'RB Player supports MP4, MKV, WEBM, AVI, MOV, FLV, MP3, FLAC, AAC, WAV, and OGG formats with full hardware acceleration.'
       },
       {
-        question: 'Do I need an internet connection?',
-        answer: 'No, you can play local media entirely offline. Internet is only required for streaming features (like YouTube) and online syncing.'
+        question: 'Do I need an internet connection for local files?',
+        answer: 'No, your local audio and video files play 100% offline. Internet connection is only required for network streaming, OpenSubtitles search, and software updates.'
       },
       {
-        question: 'What do I get with the Pro Version for 20 GHS/month?',
-        answer: 'The Pro Version unlocks the Advanced Equalizer, the Secure Private Vault for hiding files, and allows you to download YouTube videos directly to your device (including converting to MP3 audio on the Android version).'
+        question: 'What features are included in RB Player Pro?',
+        answer: 'RB Player Pro includes unlimited high-speed HD/4K downloads, full access to the AES-256 Encrypted Vault, 10-band audio DSP equalizer, and OpenSubtitles auto-search.'
       }
     ]
   },

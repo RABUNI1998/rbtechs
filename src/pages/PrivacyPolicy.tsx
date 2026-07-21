@@ -48,37 +48,29 @@ export default function PrivacyPolicy() {
               <div className="bg-blue-50/50 rounded-2xl p-6 md:p-8 my-8 border border-blue-100">
                 <h2 className="text-2xl font-bold text-blue-900 mt-0 mb-4 flex items-center gap-2">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
-                  App Store Editions (Microsoft Store & Google Play)
+                  App Store & Official Editions (Microsoft Store, Play Store & Web)
                 </h2>
-                <p className="font-bold text-gray-900 mb-2">100% Offline & Private</p>
+                <p className="font-bold text-gray-900 mb-2">100% Private & User-Controlled Data</p>
                 <p className="text-gray-700">
-                  <strong> They do NOT connect to the internet, do NOT integrate with YouTube or any third-party APIs, and do NOT collect, transmit, or store any personal data or telemetry.</strong> All media processing, playback, and Private Vault encryption occur entirely offline on your local device.
-                </p>
-                <p className="text-gray-700 mt-2">
-                  <em>Note on Internet Access:</em> While the application manifest may declare Internet capabilities (`internetClient`) to allow the underlying framework to function correctly across different devices, the Store editions themselves do not actively make network requests or collect data.
+                  <strong>RB Player is designed as a privacy-first universal local and network media player.</strong> All local file indexing, playback processing, and AES-256 Private Vault encryption occur entirely offline on your local device. We do not harvest, track, or sell your personal consumption data.
                 </p>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Pro & Direct Download Editions (Windows & Android)</h2>
-              <p>
-                The versions of RB Player downloaded directly from our website or GitHub (including the Pro versions) include features that connect to external services.
-              </p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Network Streaming & Services Privacy</h2>
               
-              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">1. YouTube Integration</h3>
+              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">1. Universal Network Link Streamer</h3>
               <p>
-                These editions integrate with YouTube via third-party APIs (e.g., `youtube_explode_dart`) to allow you to stream and download videos. When using these features, your device communicates directly with YouTube's public servers. We do not intermediate this connection, nor do we collect, log, or track your search history, watch history, or download activity. Your usage of these features is subject to YouTube's terms of service and Google's Privacy Policy.
+                RB Player includes a Universal Link Streamer allowing you to paste direct media URLs (such as MP4, HLS, or web streams) for instant playback or offline caching. Communication happens directly between your device and the remote host server. RB TECHS does not record, log, or track your stream URLs, search queries, or downloaded files.
               </p>
 
-              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">2. Local Storage & Permissions</h3>
+              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">2. OpenSubtitles Integration</h3>
               <p>
-                To function properly, RB Player requests the `READ_EXTERNAL_STORAGE` and `MANAGE_EXTERNAL_STORAGE` permissions on Android devices. This is used exclusively to:
+                When searching for movie subtitles, the app queries the OpenSubtitles API directly to fetch matched subtitle files. No user account data or personal identifiers are collected during this process.
               </p>
-              <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li>Scan and display your local music and video libraries.</li>
-                <li>Move and encrypt files into your Private Vault.</li>
-              </ul>
+
+              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">3. Local Storage & Vault Security</h3>
               <p>
-                We do not upload, scan, or share your local files. All AES-256 encryption for the Private Vault happens securely on your device, and your biometric/PIN data is handled by the Android OS and is never accessible to us.
+                Local file permissions (`MANAGE_EXTERNAL_STORAGE` / `runFullTrust`) are used strictly to index your audio/video libraries, update ID3 tags, and encrypt files in your PIN-protected Private Vault. Your media files and encryption PINs never leave your device.
               </p>
             </>
           ) : (

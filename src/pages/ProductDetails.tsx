@@ -150,12 +150,15 @@ export default function ProductDetails() {
                 {product.platforms.map((platform, i) => {
                   const downloadUrl = product.downloadUrls?.[platform];
                   const isAvailable = downloadUrl && downloadUrl !== '#' && !product.comingSoon;
+                  const isExternal = downloadUrl?.startsWith('http');
 
                   return (
                     <motion.a 
                       key={platform} 
                       href={isAvailable ? downloadUrl : '#'}
-                      download={isAvailable}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                      download={!isExternal && isAvailable ? true : undefined}
                       onClick={(e) => {
                         if (!isAvailable) {
                           e.preventDefault();
