@@ -1,5 +1,5 @@
 import rbPlayerLogo from '../assets/rbplayer/logo.png';
-import rbPlayerBanner from '../assets/rbplayer/windows/streamer screen.jpg';
+import rbPlayerBanner from '../assets/rbplayer/windows/network screen.png';
 import rbPlayerAndroid1 from '../assets/rbplayer/android/Screenshot 1.jpg';
 import rbPlayerAndroid2 from '../assets/rbplayer/android/Screenshot 2.jpg';
 import rbPlayerAndroid3 from '../assets/rbplayer/android/Screenshot 3.jpg';
@@ -9,7 +9,7 @@ import rbPlayerAndroid6 from '../assets/rbplayer/android/Screenshot 6.jpg';
 import rbPlayerWin1 from '../assets/rbplayer/windows/equilizer.jpg';
 import rbPlayerWin2 from '../assets/rbplayer/windows/folder screen.jpg';
 import rbPlayerWin3 from '../assets/rbplayer/windows/downloads.png';
-import rbPlayerWin4 from '../assets/rbplayer/windows/streamer screen.jpg';
+import rbPlayerWin4 from '../assets/rbplayer/windows/network screen.png';
 
 import rbCalcLogo from '../assets/rbcalculator/logo.png';
 import rbCalcAndroid1 from '../assets/rbcalculator/android/Screenshot 1.jpg';
