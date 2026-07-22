@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "download_url": "https://rbtechs.netlify.app/downloads/RBPlayer_Store_Installer_1.0.3.exe",
-  "release_notes": "Version 1.0.3: Instant library loading, 60 FPS animated audio visualizer, native FFmpeg processing, and enhanced universal network streaming.",
+  "version": "1.0.4",
+  "download_url": "https://apps.microsoft.com/detail/9PNMJ4TXZ4BZ",
+  "release_notes": "Version 1.0.4: Added playlist cover photos and Microsoft Store Pro subscription.",
   "mandatory": false
 }
